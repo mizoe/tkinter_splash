@@ -4,7 +4,7 @@ Opens splash window with Python3 Tkinter.
 
 Please see the gif animation below.
 
-![snapshot](https://github.com/mizoe/tkinter_splash/splash.gif)
+![snapshot](https://github.com/mizoe/tkinter_splash/blob/master/splash.gif)
 
 
 
