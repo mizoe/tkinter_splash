@@ -11,6 +11,7 @@ class App(tkinter.Tk):
     def open_splash_window(self):
         self.splash_window = tkinter.Toplevel(self)
         self.splash_window.overrideredirect(True)
+
         # open image file
         splash_file = Image.open('splash.png')
         # create ImageTk instance
@@ -25,9 +26,14 @@ class App(tkinter.Tk):
                                         mode="determinate")
         self.progress.pack(side="bottom")
 
+        x = (self.winfo_screenwidth() - self.splash_photo_image.width())//2
+        y = (self.winfo_screenheight() - self.splash_photo_image.height())//2
+
+        self.splash_window.geometry("+{}+{}".format(x, y))
+        self.splash_window.attributes("-topmost", True)
+
         self.bytes = 0
         self.maxbytes = 0
-        self.finished = False
         self.start_splash()
 
     def start_splash(self):
