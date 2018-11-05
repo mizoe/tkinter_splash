@@ -1,6 +1,6 @@
 # overview
 
-Opens splash window with Python3 Tkinter.
+Opens splash window for Python3 Tkinter, with progressbar.
 
 Please see the gif animation below.
 
