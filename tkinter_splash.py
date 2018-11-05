@@ -2,6 +2,7 @@ import tkinter
 import tkinter.ttk as ttk
 from PIL import Image, ImageTk
 
+
 class App(tkinter.Tk):
     def __init__(self, *args, **kwargs):
         tkinter.Tk.__init__(self, *args, **kwargs)
@@ -26,10 +27,10 @@ class App(tkinter.Tk):
                                         mode="determinate")
         self.progress.pack(side="bottom")
 
-        x = (self.winfo_screenwidth() - self.splash_photo_image.width())//2
-        y = (self.winfo_screenheight() - self.splash_photo_image.height())//2
+        self.window_x = (self.winfo_screenwidth() - self.splash_photo_image.width())//2
+        self.window_y = (self.winfo_screenheight() - self.splash_photo_image.height())//2
 
-        self.splash_window.geometry("+{}+{}".format(x, y))
+        self.splash_window.geometry("+{}+{}".format(self.window_x, self.window_y))
         self.splash_window.attributes("-topmost", True)
 
         self.bytes = 0
@@ -54,7 +55,7 @@ class App(tkinter.Tk):
             self.open_main_window()
 
     def open_main_window(self):
-        self.geometry("256x256")
+        self.geometry("256x256+{}+{}".format(self.window_x, self.window_y))
         self.main_label = tkinter.Label(self, text="This is main window.")
         self.main_label.pack()
 
