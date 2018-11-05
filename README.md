@@ -1,6 +1,14 @@
-opens splash window
+# overview
 
-reference:
+Opens splash window with Python3 Tkinter.
+
+Please see the gif animation below.
+
+![snapshot](https://github.com/mizoe/tkinter_splash/splash.gif)
+
+
+
+## reference:
 - stackoverflow "How to make a Tkinter window jump to the front?"
 
 https://stackoverflow.com/questions/1892339/how-to-make-a-tkinter-window-jump-to-the-front
