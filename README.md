@@ -1,0 +1,1 @@
+opens splash window
